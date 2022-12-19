@@ -69,8 +69,9 @@ body {
 .Title {
   margin-bottom: 20px;
   text-align: center;
-  font-size: clamp(28px, calc(var(--size) * 1.7), 54px);
-  background: turquoise;
+  font-size: clamp(32px, calc(var(--size) * 1.7), 54px);
+  font-weight: 700;
+  background: #FFFFFF;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -330,6 +331,20 @@ a {
   transition: width var(--td) var(--te) 0.75s;
 }
 
+.MainBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.WidgetBox {
+  width: 320px;
+  height: 90vh;
+  margin-top: 20px;
+  margin-left: 25px;
+  background: #666;
+}
+
 .FooterText {
   margin-top: 30px;
   text-align: center;
@@ -359,10 +374,34 @@ a {
   .buttons button {
     font-size: 30px;
   }
+  .Title {
+    font-size: clamp(26px, calc(var(--size) * 1.7), 54px);
+  }
+  .banner .inner > h1 {
+    font-size: 1.5em;
+  }
 }
 
 @media (min-width: 480px) {
   .banner .inner > h1 {
     font-size: 2em;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .Container,
+  .ImageBox,
+  .buttons {
+    width: 310px;
+  }
+  .banner {
+    --w: 310px;
+    --h: 95px;
+  }
+  .Title {
+    font-size: clamp(22px, calc(var(--size) * 1.7), 54px);
+  }
+  .SubTitle {
+    font-size: clamp(20px, calc(var(--size) * 1.7), 32px);
   }
 }

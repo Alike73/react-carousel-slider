@@ -40,7 +40,8 @@ function App() {
   const btnText = showMore ? "Show less" : "Show more";
 
   return (
-    <div>
+    <div className='MainBox'>
+      <div>
       <div className="wave">
         <h1 className='Title'>TOP <span className='ResortAmount'>{data.length}</span> THAILAND RESORTS</h1>
       </div>
@@ -79,7 +80,13 @@ function App() {
       <div className="Container">
         <p className='FooterText'>All images were taken from: <a className='SourceLink' href={"https://www.expedia.com/"} target={"_blank"} rel={"noopener noreferrer"}>expedia.com</a> and, are used for educational purposes only.</p>
       </div>
-      
+    </div>
+    
+    <div className='WidgetBox'>
+
+    </div>
+
+
     </div>
     
   );
